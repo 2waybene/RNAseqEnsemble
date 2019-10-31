@@ -1,7 +1,7 @@
 Sample Module Repository
 ========================
 
-This simple project is an example repo for Python projects.
+This simple project is an example repo for Python projects I learned from Ken:
 
 `Learn more <http://www.kennethreitz.org/essays/repository-structure-and-python>`_.
 
@@ -10,11 +10,13 @@ This simple project is an example repo for Python projects.
 If you want to learn more about ``setup.py`` files, check out `this repository <https://github.com/kennethreitz/setup.py>`_.
 
 ✨🍰✨
-# muver
-muver is an analytical framework developed to improve sensitivity and increase accuracy in mutation identification from high-throughput sequencing data. muver provides significantly increased accuracy in challenging genomic contexts, including low complexity repetitive sequences. The muver framework has been applied to data from mutation accumulation experiments in yeast. 
+# RNAseqEnsemble
+
+RNAseqEnsemble is an analytical framework collecting a few popular RNAseq analysis methods like DESeq, baySeq cuffdiff TSPM edgeR. 
 
 ## Requirements
-muver was developed using Python 2.7.13. In addition to requirements specified in setup.py, muver requires installation of the following tools:
+RNAseqEnsemble was developed using Python 2.7.13. In addition to requirements specified in setup.py, muver requires installation of the following tools:
+
 * [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 * [GATK, version 3.7-0](https://software.broadinstitute.org/gatk/download/)
 * [picard](https://broadinstitute.github.io/picard/)

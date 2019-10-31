@@ -46,10 +46,10 @@ RNAseqEnsemble COMMAND --help
 See the [manual](docs/manual.md) for further usage details.
 
 ## Authors
-RNAseqEnsemble was conceptualized by Scott Lujan and Adam Burkholder. RNAseqEnsemble was written by Adam Burkholder and Christopher Lavender.
+RNAseqEnsemble was developed initially by Jianying Li.
 
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) [Christopher Lavender](https://github.com/lavenderca/muver.git) [[Ken](http://www.kennethreitz.org/essays/repository-structure-and-python)project template.

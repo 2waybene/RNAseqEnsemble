@@ -15,7 +15,7 @@ If you want to learn more about ``setup.py`` files, check out `this repository <
 RNAseqEnsemble is an analytical framework collecting a few popular RNAseq analysis methods like DESeq, baySeq cuffdiff TSPM edgeR. 
 
 ## Requirements
-RNAseqEnsemble was developed using Python 2.7.13. In addition to requirements specified in setup.py, muver requires installation of the following tools:
+RNAseqEnsemble was developed using Python 2.7.13. In addition to requirements specified in setup.py, RNAseqEnsemble requires installation of the following tools:
 
 * [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 * [GATK, version 3.7-0](https://software.broadinstitute.org/gatk/download/)
@@ -23,30 +23,30 @@ RNAseqEnsemble was developed using Python 2.7.13. In addition to requirements sp
 * [samtools](http://www.htslib.org/download/)
 
 ## Installation
-Proper function of muver requires the paths to depencies to be set.  To do this, manually set the paths in `paths.cfg` using a text editor.
+Proper function of RNAseqEnsemble requires the paths to depencies to be set.  To do this, manually set the paths in `paths.cfg` using a text editor.
 
-After the correct paths have been set, install muver with the following command:
+After the correct paths have been set, install RNAseqEnsemble with the following command:
 ```
 python setup.py install
 ```
 
 ## Usage
-All of muvers functions may be accessed using its command line interface. General usage is as follows:
+All of RNAseqEnsembles functions may be accessed using its command line interface. General usage is as follows:
 ```
-muver COMMAND [OPTIONS] [ARGS]...
+RNAseqEnsemble COMMAND [OPTIONS] [ARGS]...
 ```
 A list of commands can be found by using the following:
 ```
-muver --help
+RNAseqEnsemble --help
 ```
 Details about each command can be found by using the following:
 ```
-muver COMMAND --help
+RNAseqEnsemble COMMAND --help
 ```
 See the [manual](docs/manual.md) for further usage details.
 
 ## Authors
-muver was conceptualized by Scott Lujan and Adam Burkholder. muver was written by Adam Burkholder and Christopher Lavender.
+RNAseqEnsemble was conceptualized by Scott Lujan and Adam Burkholder. RNAseqEnsemble was written by Adam Burkholder and Christopher Lavender.
 
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.

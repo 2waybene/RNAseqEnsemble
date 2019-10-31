@@ -1,15 +1,12 @@
-Sample Module Repository
+RNAseqEnsemble Module Repository
 ========================
 
-This simple project is an example repo for Python projects I learned from Ken:
-
-`Learn more <http://www.kennethreitz.org/essays/repository-structure-and-python>`_.
+This simple project is an example repo for Python projects I learned from Kenneth Reitz
 
 ---------------
 
 If you want to learn more about ``setup.py`` files, check out `this repository <https://github.com/kennethreitz/setup.py>`_.
 
-✨🍰✨
 # RNAseqEnsemble
 
 RNAseqEnsemble is an analytical framework collecting a few popular RNAseq analysis methods like DESeq, baySeq cuffdiff TSPM edgeR. 
@@ -52,4 +49,4 @@ RNAseqEnsemble was developed initially by Jianying Li.
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) [Christopher Lavender](https://github.com/lavenderca/muver.git) [[Ken](http://www.kennethreitz.org/essays/repository-structure-and-python)project template.
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter), the[audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage), my previous colleague [Christopher Lavender](https://github.com/lavenderca/muver.git) and [Kenneth Reitz](http://www.kennethreitz.org/essays/repository-structure-and-python)project template.

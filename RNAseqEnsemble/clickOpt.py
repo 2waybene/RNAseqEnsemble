@@ -27,6 +27,48 @@ from wrappers.samtools import get_mpileup_depths
 def main(args=None):
     pass
 
+
+@main.command()
+@click.option('--processes', '-p', default=8, type=int,
+              help='Number of processes to use.')
+@click.argument('reference_assembly', type=click.Path(exists=True))
+@click.argument('fastq_list', type=click.Path(exists=True))
+@click.argument('output_directory', type=str)
+
+def run_tophat_alignment(reference_assembly, fastq_list, output_directory, processes):
+    '''
+    Run tophat alignment
+
+    FASTQ files and other parameters for each sample are specified in the
+    FASTQ_LIST, a TXT file in tab-delimited format. For file specification,
+    see tool documentation.
+
+    Accepted fields for the FASTQ_LIST include:
+
+    \b
+    "Sample Name"
+    "Mate 1 FASTQ"
+    "Mate 2 FASTQ"
+    "Ploidy"
+    "CNV BedGraph"
+    '''
+    _run_tophat(
+        reference_assembly,
+        fastq_list,
+        output_directory,
+        p=processes,
+    )
+
+def _run_tophat(
+        reference_assembly,
+        fastq_list,
+        experiment_directory,
+        p
+    ):
+
+    print ("tophat -p " + str(p) + " -o " + str(experiment_directory) + " " + str(reference_assembly) + fastq_list)
+
+
 @main.command()
 @click.option('--processes', '-p', default=1, type=int,
               help='Number of processes to use.')

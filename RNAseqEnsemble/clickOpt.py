@@ -13,7 +13,9 @@ from depth_correction import write_corrected_bedgraph
 from depth_distribution import (calculate_depth_distribution_bedgraph,
                                 filter_regions_by_depth_bedgraph)
 from depth_ratios import calculate_depth_ratios as _calculate_depth_ratios
+'''
 from pipeline import run_pipeline as _run_pipeline
+'''
 from reference import create_reference_indices, read_chrom_sizes
 from repeat_indels import fit_repeat_indel_rates as _fit_repeat_indel_rates
 from repeats import create_repeat_file as _create_repeat_file
@@ -31,7 +33,8 @@ def main(args=None):
 @main.command()
 @click.option('--processes', '-p', default=8, type=int,
               help='Number of processes to use.')
-@click.argument('reference_assembly', type=click.Path(exists=True))
+# @click.argument('reference_assembly', type=click.Path(exists=True))
+@click.argument('reference_assembly', type=str)
 @click.argument('fastq_list', type=click.Path(exists=True))
 @click.argument('output_directory', type=str)
 
@@ -67,6 +70,48 @@ def _run_tophat(
     ):
 
     print ("tophat -p " + str(p) + " -o " + str(experiment_directory) + " " + str(reference_assembly) + fastq_list)
+
+
+@main.command()
+@click.option('--processes', '-p', default=6, type=int,
+              help='Number of processes to use.')
+@click.argument('refIndex', type=str)
+@click.argument('zipped', default=True, type=bool)
+@click.argument('fastq1', type=click.Path(exists=True))
+@click.argument('fastq2', type=click.Path(exists=True))
+@click.argument('outputPrefix', type=str)
+
+
+def run_STAR_alignment(refIndex, fastq1, fastq2,outputPrefix, zipped,processes):
+    '''
+    Run STAR alignment
+    STAR  --genomeDir /ddn/gs1/home/li11/refDB/hg38/STAR_index_hg38noAlt_RefSeq10oct2019/ --readFilesIn <(zcat -c   ~/project2019/ThuyAi_track_stuff/bamDir/RNAseqData/H202SC19100044/Ra
+    wdata/K70_2/K70_2_CRRA190004026-1a_HMHVVDSXX_L1_1.fq.gz) <(zcat -c  ~/project2019/ThuyAi_track_stuff/bamDir/RNAseqData/H202SC19100044/Rawdata/K70_2/K70_2_CRRA190004026-1a_HMHVVDSXX
+    _L1_2.fq.gz)  --runThreadN 6 --sjdbGTFfile /ddn/gs1/home/li11/refDB/hg38/hg38_RefSeq10oct2019.gtf   --outFileNamePrefix starAln/K70_2_w_GTF_
+
+    '''
+    _run_STAR (
+        refIndex,
+        zipped,
+        fastq1,
+        fastq2,
+        outputPrefix,
+        p=processes,
+    )
+
+def _run_STAR(
+        refIndex,
+        zipped,
+        fastq1,
+        fastq2,
+        outputPrefix,
+        p
+    ):
+    if (zipped):
+        print ("STAR --genomeDir " + str(refIndex) + " --readFilesIn <(zcat  " + str(fastq1) + ") <(zcat  " + str(fastq2) + "  --runThreadN " + str(p) + " --outFileNamePrefix " + str(outputPrefix))
+    else:
+        print("STAR --genomeDir " + str(refIndex) + " --readFilesIn   " + str(fastq1) + " " + str(fastq2) + "  --runThreadN " + str(p) + " --outFileNamePrefix " + str(outputPrefix))
+
 
 
 @main.command()

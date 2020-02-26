@@ -48,4 +48,4 @@ RNAseqEnsemble was developed initially by Jianying Li.
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter), the[audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage), my previous colleague [Christopher Lavender](https://github.com/lavenderca/muver.git) and [Kenneth Reitz's](http://www.kennethreitz.org/essays/repository-structure-and-python) project template.
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter), the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage), my previous colleague [Christopher Lavender](https://github.com/lavenderca/muver.git) and [Kenneth Reitz's](http://www.kennethreitz.org/essays/repository-structure-and-python) project template.
